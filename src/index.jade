@@ -1,0 +1,19 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+  .container
+    #keys
+      .key(data-key='65')
+        h1 A
+        p kick
+      .key(data-key='83') 
+        h1 S
+        p snare
+      .key(data-key='68') 
+        h1 D
+        p hihat
+  audio(data-key='65' src='./audio/kick.wav')
+  audio(data-key='83' src='./audio/snare.wav')
+  audio(data-key='68' src='./audio/hihat.wav')

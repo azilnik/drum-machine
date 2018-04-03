@@ -1,0 +1,43 @@
+// Normalize Styles
+@import '../../node_modules/normalize.css/normalize.css';
+
+// Import Modules
+@import '../_modules/link/link';
+
+// Box sizing partial styles
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+flexCenter(dir)
+  display flex
+  flex-direction dir
+  justify-content center
+  align-items center
+
+html, body
+  width 100%
+  height 100%
+  .container
+    height 100%
+    width 100%
+    #keys
+      height 100%
+      flexCenter(row)
+      justify-content space-around
+      .key
+        flexCenter(column)
+        transition all 0.07s
+        border 2pt solid black
+        padding 4pt
+        min-width 70pt
+        max-width 100pt
+        width 20%
+      .playing
+        transform scale(1.5)
+        border-color orange
+        color orange
